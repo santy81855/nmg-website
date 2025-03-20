@@ -1,0 +1,117 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--padding-large);
+    position: relative;
+    z-index: 0;
+    padding-block: calc(var(--padding-x2large) * 0.7);
+    max-width: 600px;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline-start: var(--padding-large);
+}
+
+.image {
+    aspect-ratio: 16/9;
+    width: 70%;
+    height: auto;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.textContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-inline: var(--padding-x2large);
+    padding-block: var(--padding-large);
+    gap: var(--padding-small);
+    margin-inline-start: -5em;
+    width: 40%;
+}
+
+.textContainer h3 {
+    font-family: var(--gilroy-font);
+    font-weight: 400;
+    font-size: calc(var(--font-size-medium));
+}
+
+.textContainer p {
+    color: #7f7f7f;
+    text-align: right;
+    font-size: calc(var(--font-size-small) * 0.7);
+    line-height: 1.4;
+    letter-spacing: 1px;
+    width: 20ch;
+}
+
+@media (width > 600px) {
+    .container {
+        padding-block: var(--padding-x2large);
+    }
+}
+
+@media (width > 550px) {
+    .textContainer {
+        padding-block: var(--padding-xlarge);
+    }
+}
+
+@media (width < 460px) {
+    .textContainer {
+        padding-block: var(--padding-medium);
+    }
+
+    .textContainer h3 {
+        font-size: calc(var(--font-size-medium) * 0.8);
+    }
+
+    .textContainer p {
+        font-size: calc(var(--font-size-small) * 0.6);
+    }
+}
+
+@media (width < 330px) {
+    .textContainer {
+        padding-block: var(--padding-small);
+    }
+
+    .textContainer h3 {
+        font-size: calc(var(--font-size-medium) * 0.6);
+    }
+
+    .textContainer p {
+        font-size: calc(var(--font-size-small) * 0.6);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .item {
+        cursor: pointer;
+    }
+
+    .item:hover {
+        transform: scale(1.02);
+        transition: transform 0.6s ease-in-out;
+    }
+}

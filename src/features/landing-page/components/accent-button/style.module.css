@@ -1,0 +1,20 @@
+.button {
+    background-color: rgb(var(--accent-color-rgb));
+    color: white;
+    padding: var(--padding-medium) var(--padding-large);
+    border-radius: var(--border-radius);
+    font-family: var(--gilroy-font);
+    font-size: var(--font-size-small);
+    font-weight: 200;
+    border: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button {
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: rgb(var(--accent-color-hover-rgb));
+    }
+}
