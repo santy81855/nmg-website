@@ -1,0 +1,77 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--padding-medium);
+}
+
+.title {
+    font-family: var(--gilroy-font);
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: var(--font-size-large);
+    line-height: 1.4;
+    letter-spacing: 1.8px;
+    font-weight: 200;
+    width: 100%;
+    padding-inline: var(--padding-x2large);
+}
+
+.itemContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-medium);
+    padding-inline: var(--padding-xlarge);
+    padding-block: var(--padding-medium);
+    background-color: rgb(var(--accent-color-rgb));
+}
+
+.item {
+    display: flex;
+    gap: var(--padding-medium);
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.item svg {
+    stroke: white;
+    width: 20px;
+    height: 20px;
+}
+
+.item p {
+    font-family: var(--gilroy-font);
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    font-size: var(--font-size-small);
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+}
+
+.itemFill svg {
+    stroke: none;
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+
+.socialContainer {
+    width: 100%;
+    display: flex;
+    gap: var(--padding-medium);
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.socialItem {
+    width: 20px;
+    height: 20px;
+}
+
+.socialItem svg {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: var(--padding-medium);
+}
+
+.container h3 {
+    font-family: var(--gilroy-font);
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+    color: rgb(--var-text-color-rgb);
+    width: 100%;
+    text-align: left;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: var(--padding-small);
+}
+
+.form .inputRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: var(--padding-small);
+    position: relative;
+}
+
+.form .inputRow label,
+.form label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    font-family: var(--gilroy-font);
+    font-size: var(--font-size-small);
+    font-weight: 200;
+    color: rgb(var(--text-color-rgb));
+}
+
+.form .inputRow input,
+.form textarea {
+    flex-grow: 1;
+    padding: var(--padding-small);
+    border-radius: var(--border-radius-xsmall);
+    font-family: var(--gilroy-font);
+    font-size: var(--font-size-small);
+    font-weight: 200;
+    background-color: #f5f5f5;
+    border: none;
+    min-width: 100px;
+}
+
+.form .inputRow input::placeholder,
+.form textarea::placeholder {
+    color: rgb(100, 100, 100);
+    font-family: var(--gilroy-font);
+    font-size: var(--font-size-small);
+    font-weight: 400;
+}
+
+.form .inputRow input:focus,
+.form textarea:focus {
+    outline: 1px solid rgb(var(--accent-color-rgb));
+}
+
+.form textarea {
+    width: 100%;
+}
+
+.form button {
+    border: none;
+    border-radius: var(--border-radius);
+    padding-inline: var(--padding-xlarge);
+    padding-block: var(--padding-small);
+    font-family: var(--gilroy-font);
+    font-size: var(--font-size-small);
+    font-weight: 200;
+    background-color: rgb(var(--accent-color-2-rgb));
+    color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    align-self: flex-end;
+    margin-block-start: var(--padding-small);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .form button {
+        cursor: pointer;
+    }
+
+    .form button:hover {
+        background-color: rgb(var(--accent-color-rgb));
+    }
+}
+
+@media (width < 350px) {
+    .form .inputRow {
+        flex-wrap: wrap;
+    }
+}

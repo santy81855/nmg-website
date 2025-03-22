@@ -1,0 +1,67 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: rgba(30, 30, 30, 0.4); /* Translucent effect */
+    backdrop-filter: blur(3px); /* Smooth blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: var(--padding-large);
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    justify-content: space-between;
+    gap: var(--padding-medium);
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--padding-medium);
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: white;
+    font-size: var(--font-size-medium);
+    font-family: var(--gilroy-font);
+    font-weight: 200;
+    transition: color 0.3s;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--padding-small);
+}
+
+.logoContainer h3 {
+    font-size: var(--font-size-medium);
+    font-family: var(--gilroy-font);
+    font-weight: 200;
+    color: white;
+}
+
+.logoContainer .logo {
+    width: 30px;
+    height: 40px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .logoContainer {
+        cursor: pointer;
+    }
+
+    .navLinks li a:hover {
+    }
+}

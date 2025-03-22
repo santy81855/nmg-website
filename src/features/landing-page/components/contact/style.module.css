@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-inline: var(--padding-large);
+}
+
+.topItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    min-width: 200px;
+    padding-inline: var(--padding-medium);
+    padding-block-start: var(--padding-medium);
+    padding-block-end: var(--padding-small);
+    background-color: rgb(var(--accent-color-rgb));
+    border-top-left-radius: var(--border-radius-small);
+    border-top-right-radius: var(--border-radius-small);
+    margin-inline-end: auto;
+    margin-inline-start: var(--padding-large);
+}
+
+.topItem h3 {
+    font-family: var(--gilroy-font);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    color: white;
+    width: 100%;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: var(--padding-small);
+    padding-block: var(--padding-small);
+}
+
+.itemContainer .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: var(--padding-small);
+}
+
+.itemContainer .item svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.itemContainer .instagramIcon svg {
+    stroke: white;
+}
+
+.itemContainer p {
+    font-family: var(--gilroy-font);
+    font-size: calc(var(--font-size-xsmall) * 1.2);
+    font-weight: 200;
+    color: white;
+}
+
+.socialMediaContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-block-start: var(--padding-small);
+    gap: var(--padding-medium);
+}
+
+.buttonLink {
+    width: 25px;
+    height: 25px;
+}
+
+.buttonLink svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bottomItem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: var(--padding-large);
+    padding-inline: var(--padding-xlarge);
+    background-color: white;
+    border-radius: calc(var(--border-radius-small) * 1.2);
+}

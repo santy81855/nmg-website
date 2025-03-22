@@ -1,6 +1,6 @@
 :root {
     --max-width: 1200px;
-    --nav-height: 65px;
+    --nav-height: 120px;
     --border-radius: 25px;
     --border-radius-small: 10px;
     --border-radius-xsmall: 5px;
@@ -12,6 +12,7 @@
     --font-size-x2large: 2rem;
     --font-size-x3large: 3rem;
     --font-size-x4large: 4rem;
+    --padding-xsmall: 0.25rem;
     --padding-small: 0.5rem;
     --padding-medium: 1rem;
     --padding-large: 1.5rem;

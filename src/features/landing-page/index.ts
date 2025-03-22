@@ -7,6 +7,7 @@ export { default as WorkComponent } from "./components/work-component/WorkCompon
 export { default as TrustSection } from "./components/trust-section/TrustSection";
 export { default as ChooseSection } from "./components/choose-section/ChooseSection";
 export { default as Contact } from "./components/contact/Contact";
+export { default as ContactForm } from "./components/contact-form/ContactForm";
 export {
     constellation,
     deck,
@@ -19,4 +20,10 @@ export {
     house,
     handshake,
     check,
+    phone,
+    mail,
+    facebook,
+    instagram,
+    instagramColor,
+    facebookColor,
 } from "./lib/icons";
