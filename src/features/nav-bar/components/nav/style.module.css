@@ -57,11 +57,26 @@
     height: 40px;
 }
 
+.hamburgerMenu {
+    display: none;
+}
+
 @media (hover: hover) and (pointer: fine) {
     .logoContainer {
         cursor: pointer;
     }
 
     .navLinks li a:hover {
+    }
+}
+
+@media (width < 658px) {
+    .navLinks,
+    .content {
+        display: none;
+    }
+
+    .hamburgerMenu {
+        display: flex;
     }
 }

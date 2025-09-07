@@ -1,0 +1,50 @@
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--padding-small);
+}
+
+.logoContainer h3 {
+    font-size: var(--font-size-medium);
+    font-family: var(--gilroy-font);
+    font-weight: 200;
+    color: white;
+}
+
+.logoContainer .logo {
+    width: 30px;
+    height: 40px;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--padding-medium);
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: rgb(var(--text-color-rgb));
+    font-size: var(--font-size-medium);
+    font-family: var(--gilroy-font);
+    font-weight: 200;
+    transition: color 0.3s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .logoContainer {
+        cursor: pointer;
+    }
+}

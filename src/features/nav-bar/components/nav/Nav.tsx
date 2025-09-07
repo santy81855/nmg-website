@@ -1,6 +1,7 @@
 import styles from "./style.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import HamburgerMenu from "../hamburger-menu/HamburgerMenu";
 
 const Navbar: React.FC = () => {
     return (
@@ -18,13 +19,22 @@ const Navbar: React.FC = () => {
                 </Link>
                 <ul className={styles.navLinks}>
                     <li>
-                        <a href="#home">Home</a>
+                        <Link href="/">Home</Link>
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <Link href="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link href="/projects">Projects</Link>
+                    </li>
+                    <li>
+                        <Link href="/contact-us">Contact Us</Link>
                     </li>
                 </ul>
             </section>
+            <div className={styles.hamburgerMenu}>
+                <HamburgerMenu />
+            </div>
         </nav>
     );
 };

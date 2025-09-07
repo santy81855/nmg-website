@@ -1,0 +1,26 @@
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start; /* align with grid left edge */
+    align-items: center;
+}
+
+.nav,
+.page {
+    border: none;
+    background: #12182a;
+    color: white;
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.page.active {
+    background: rgb(var(--accent-color-rgb));
+    color: #0e0e0e;
+}
+.nav:disabled {
+    opacity: 0.5;
+    cursor: default;
+}

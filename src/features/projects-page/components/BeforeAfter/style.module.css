@@ -1,0 +1,38 @@
+/* /features/projects-page/components/BeforeAfter/style.module.css */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--padding-medium);
+}
+
+.block {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    /* Choose the unified aspect ratio you like (try 4/3 or 3/2) */
+    aspect-ratio: 4 / 3;
+    background: #0e1422;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+}
+
+.img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* uniform crop for a clean row */
+}
+
+.caption {
+    margin-top: 0.35rem;
+    font-size: var(--font-size-small);
+    text-align: center;
+    opacity: 0.7;
+}
+
+/* Stack on small screens */
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}

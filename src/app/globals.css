@@ -1,6 +1,6 @@
 :root {
     --max-width: 1200px;
-    --nav-height: 120px;
+    --nav-height: 100px;
     --border-radius: 25px;
     --border-radius-small: 10px;
     --border-radius-xsmall: 5px;
@@ -45,7 +45,7 @@ body {
 
 body {
     background-color: rgb(var(--background-color-rgb));
-    color: var(--text-color-rgb);
+    color: rgb(var(--text-color-rgb));
     position: relative;
     display: flex;
     flex-direction: column;

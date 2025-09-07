@@ -1,0 +1,22 @@
+.main {
+    width: 100%;
+    height: 150%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.headerSection,
+.content {
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-xlarge);
+}
