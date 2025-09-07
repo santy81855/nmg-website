@@ -25,7 +25,7 @@ const Page = async ({
 
     // filter by category
     const filtered =
-        tabStr === "all" || !CATS.includes(tabStr as any)
+        tabStr === "all" || !CATS.includes(tabStr as typeof CATS[number])
             ? projects
             : projects.filter((p) => p.category === tabStr);
 

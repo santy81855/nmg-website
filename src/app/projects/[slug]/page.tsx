@@ -29,8 +29,11 @@ export default function ProjectDetail({ params }: { params: Params }) {
                         sizes="(max-width: 768px) 100vw, 100vw"
                         priority
                     />
+                    <div className={styles.heroOverlay}>
+                        <span className={styles.badge}>{project.category}</span>
+                        <h1 className={styles.title}>{project.title}</h1>
+                    </div>
                 </div>
-                <h1 className={styles.title}>{project.title}</h1>
                 {project.summary && (
                     <p className={styles.summary}>{project.summary}</p>
                 )}

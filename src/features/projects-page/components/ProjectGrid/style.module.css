@@ -1,9 +1,9 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(
-        auto-fill,
-        minmax(180px, 1fr)
-    ); /* responsive */
+        auto-fit,
+        minmax(clamp(260px, 33vw, 480px), 1fr)
+    ); /* responsive, cards grow on wide screens */
     gap: var(--padding-small);
     justify-items: stretch; /* cards fill column width */
     justify-content: start; /* LEFT-ALIGNED grid */
