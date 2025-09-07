@@ -7,47 +7,167 @@
     overflow-y: auto;
     overflow-x: hidden; /* page scroll */
     align-items: center;
-    background: rgb(var(--background-color-rgb));
+    /* Subtle blue accents behind content for modern contrast */
+    background: #ffffff; /* plain white */
+    /* widen only this page */
+    --max-width: 1400px;
 }
 
 .header,
 .beforeAfter,
-.gallery {
+.gallery,
+.meta {
     width: 100%;
     max-width: var(--max-width);
 }
 
 .header {
-    text-align: center;
+    text-align: left;
 }
 
 .hero {
     position: relative;
     aspect-ratio: 16/9;
     width: 100%;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px; /* less rounded corners */
     overflow: hidden;
 }
 .heroImg {
     object-fit: cover;
 }
 
-.title {
-    margin-top: 1rem;
-    font-size: var(--font-size-x3large);
-    color: rgb(var(--accent-color-contrast-rgb));
+/* Breadcrumb */
+.breadcrumb {
+    width: 100%;
+    max-width: var(--max-width);
+    /* add breathing room from hero and align with page padding */
+    margin: var(--padding-medium) 0 0;
+    padding: 0 var(--padding-large);
 }
+.breadcrumb a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.breadcrumb a:hover {
+    color: rgb(var(--accent-color-rgb));
+    background: rgba(var(--accent-color-rgb), 0.08);
+    border-color: rgba(var(--accent-color-rgb), 0.25);
+}
+.breadcrumb a:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb), 0.25);
+}
+
+/* Title overlay on hero */
+.heroOverlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: var(--padding-large) var(--padding-large) calc(var(--padding-large) + 8px);
+    background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0));
+    color: #fff;
+}
+.heroBadge {
+    display: inline-block;
+    background: rgba(255,255,255,0.95);
+    color: rgb(var(--accent-color-2-rgb));
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
+.heroTitle {
+    margin-top: 0.5rem;
+    font-size: clamp(1.75rem, 2.8vw, 3rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Make hero taller on smaller screens to keep overlay text visible */
+@media (max-width: 1024px) {
+    .hero {
+        aspect-ratio: 16/10;
+        min-height: 420px;
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        aspect-ratio: 4/3;
+        min-height: calc(420px + (var(--nav-height) * 0.25));
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        aspect-ratio: 3/2;
+        min-height: calc(460px + (var(--nav-height) * 0.25));
+    }
+}
+
+.meta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px; /* stable sidebar on wide screens */
+    gap: var(--padding-xlarge);
+    align-items: start;
+}
+
+.metaMain {}
+
+/* Title is now on hero; keep utility if needed */
+.title { display: none; }
+
 .summary {
     max-width: 70ch;
-    margin: 0.5rem auto 0;
+    margin-top: 0.75rem;
     opacity: 0.85;
 }
 
+.testimonial {
+    margin-top: var(--padding-large);
+    font-style: italic;
+    opacity: 0.9;
+}
+.testimonialAuthor {
+    margin-top: 0.25rem;
+    font-size: var(--font-size-small);
+    opacity: 0.75;
+}
+
+.metaSide {}
+
+.info {
+    display: grid;
+    gap: 0.5rem;
+}
+.info div {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+.info dt {
+    opacity: 0.8;
+    }
+.info dd {
+    margin: 0;
+}
+
+.scopeBlock {
+    margin-top: var(--padding-large);
+}
+.scopeHeading {
+    font-size: var(--font-size-large);
+    margin-bottom: 0.5rem;
+}
 .scope {
-    margin: 1rem auto 0;
-    max-width: 50ch;
-    text-align: left;
     padding-left: 1.25rem;
 }
 .scope li {
@@ -55,53 +175,92 @@
 }
 
 .gallery {
-    display: grid;
-    gap: var(--padding-medium);
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    column-count: 1;
+    column-gap: var(--padding-medium);
+}
+.gallery .sectionHeading {
+    column-span: all; /* ensure heading spans across columns */
+    break-inside: avoid;
 }
 .gItem {
-}
-.gImg {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: var(--padding-medium);
-    align-items: start;
-    justify-items: stretch; /* left-aligned feel */
-}
-
-/* Add to the same CSS file */
-.galleryContain .gImg {
-    object-fit: contain;
-    background: #0e1422;
-}
-
-.gItem {
-    position: relative;
-    border-radius: 10px; /* sleeker than big radii */
+    break-inside: avoid;
+    margin: 0 0 var(--padding-medium);
+    border-radius: 6px; /* less rounded corners */
     overflow: hidden;
-    aspect-ratio: 4 / 3; /* <- uniform frame */
-    background: #0e1422;
+    background: #ffffff;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
 }
-
 .gImg {
-    position: absolute;
-    inset: 0;
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* crops to the frame */
-    transition: transform 0.35s ease;
+    height: auto;
 }
 
-@media (hover: hover) and (pointer: fine) {
-    .gItem:hover .gImg {
-        transform: scale(1.04);
+@media (min-width: 700px) {
+    .gallery {
+        column-count: 2;
     }
+}
+@media (min-width: 1024px) {
+    .gallery {
+        column-count: 3;
+    }
+}
+@media (min-width: 1400px) {
+    .gallery {
+        column-count: 4;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .meta {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* White surface cards for structured look */
+.card {
+    background: transparent; /* blend with page */
+    border-radius: 0;
+    padding: var(--padding-xlarge);
+    border: none;
+    box-shadow: none; /* no elevation */
+}
+
+/* Section dividers for clean, modern transitions */
+.meta,
+.beforeAfter,
+.gallery {
+    position: relative;
+    padding-top: var(--padding-large);
+}
+.meta::before,
+.beforeAfter::before,
+.gallery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: var(--padding-large);
+    right: var(--padding-large);
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.10),
+        rgba(0,0,0,0.06) 30%,
+        rgba(0,0,0,0.03) 70%,
+        rgba(0,0,0,0)
+    );
+}
+
+.sectionHeading {
+    font-size: var(--font-size-large);
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    margin: var(--padding-medium) 0 var(--padding-small);
+}
+
+.richText p {
+    margin-top: 0.75rem;
+    line-height: 1.75;
 }

@@ -7,6 +7,10 @@ import { redirect } from "next/navigation";
 
 // categories that your HeaderSection uses
 const CATS = ["all", "bathrooms", "kitchens", "decks", "basements"] as const;
+type Category = typeof CATS[number];
+
+const isCategory = (v: unknown): v is Category =>
+    typeof v === "string" && (CATS as readonly string[]).includes(v);
 const PAGE_SIZE = 9;
 
 const Page = async ({
@@ -24,10 +28,11 @@ const Page = async ({
     );
 
     // filter by category
+    const selectedTab: Category = isCategory(tabStr) ? tabStr : "all";
     const filtered =
-        tabStr === "all" || !CATS.includes(tabStr as any)
+        selectedTab === "all"
             ? projects
-            : projects.filter((p) => p.category === tabStr);
+            : projects.filter((p) => p.category === selectedTab);
 
     // sort: featured first, then date desc (fallback: by title)
     const sorted = [...filtered].sort((a, b) => {
@@ -45,7 +50,7 @@ const Page = async ({
     return (
         <section className={styles.main}>
             <section className={styles.headerSection}>
-                <HeaderSection tab={tabStr} />
+                <HeaderSection tab={selectedTab} />
             </section>
 
             <section className={styles.content}>

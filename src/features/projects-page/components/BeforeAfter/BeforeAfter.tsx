@@ -23,7 +23,6 @@ export default function BeforeAfter({
                         className={styles.img}
                         sizes="(max-width:768px) 100vw, 50vw"
                     />
-                    <figcaption className={styles.caption}>Before</figcaption>
                 </figure>
             )}
             <figure className={styles.block}>
@@ -34,7 +33,6 @@ export default function BeforeAfter({
                     className={styles.img}
                     sizes="(max-width:768px) 100vw, 50vw"
                 />
-                <figcaption className={styles.caption}>After</figcaption>
             </figure>
         </section>
     );

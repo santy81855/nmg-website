@@ -8,6 +8,7 @@ export type Project = {
     date?: string; // "2025-07"
     summary: string; // short 1–2 sentence overview
     scope: string[]; // e.g. ["New tile flooring", "Custom vanity", "Lighting upgrade"]
+    description?: string; // long-form description/content
 
     hero?: {
         src: string;
@@ -57,6 +58,8 @@ export const projects: Project[] = [
         category: "bathrooms",
         summary: "A full bathroom remodel.",
         scope: ["Tile shower", "Added bathtub"],
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere, risus in volutpat rhoncus, urna nulla fermentum eros, a placerat lacus libero id libero. Integer ac vulputate felis.\n\nCurabitur a massa id neque eleifend mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent ut scelerisque massa. Donec mattis, mi non pharetra convallis, mi nibh cursus leo, id lacinia urna lorem ac arcu.",
         hero: {
             src: "/projects/kenneston-bathroom/after.jpg",
             alt: "Finished bathroom remodel",
@@ -87,6 +90,8 @@ export const projects: Project[] = [
         category: "decks",
         summary: "A new deck construction.",
         scope: ["Pressure-treated wood", "Custom railing", "elevated deck"],
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae sapien et quam euismod aliquet. Suspendisse potenti. Phasellus non mattis tellus, eu pellentesque tortor.\n\nAenean vel justo volutpat, sagittis turpis at, feugiat odio. Nulla facilisi. Nam pulvinar orci a orci lobortis, vitae fringilla sem convallis.",
         hero: {
             src: "/projects/charles-deck/after.jpg",
             alt: "Finished deck construction",
@@ -143,6 +148,8 @@ export const projects: Project[] = [
             "Bathroom addition",
             "Custom bar",
         ],
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet risus vitae metus porta tincidunt. Suspendisse potenti. Etiam eu rhoncus mauris, id volutpat arcu.\n\nMauris sed efficitur augue. Fusce sit amet arcu vitae nulla pharetra aliquam. Cras iaculis orci at justo dictum, id congue erat tristique.",
         hero: {
             src: "/projects/tefera-basement/after.jpg",
             alt: "Finished basement remodel",
@@ -194,6 +201,8 @@ export const projects: Project[] = [
         category: "bathrooms",
         summary: "A bathroom and shower remodel.",
         scope: ["Tile shower", "Custom vanity", "Lighting upgrade"],
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis, dui in elementum gravida, lectus augue dictum nulla, vitae porttitor arcu arcu sit amet lorem.\n\nInteger ultricies, nunc quis consectetur aliquet, turpis massa egestas velit, id ultrices nunc purus vitae arcu.",
         hero: {
             src: "/projects/josh-bathroom/after.jpg",
             alt: "Finished bathroom remodel",
@@ -244,6 +253,8 @@ export const projects: Project[] = [
         category: "basements",
         summary: "A basement kitchen remodel.",
         scope: ["Custom cabinets", "Lighting upgrade"],
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel lacinia purus. In suscipit eget lectus at mattis. Sed elementum justo ut ante interdum, id tempor nibh placerat.\n\nDuis tempor, quam id aliquet imperdiet, arcu nibh cursus libero, vitae pulvinar magna mi quis est.",
         hero: {
             src: "/projects/andrew-basement/after.jpg",
             alt: "Finished basement kitchen remodel",
@@ -293,6 +304,8 @@ export const projects: Project[] = [
             "Lighting upgrade",
             "island installation",
         ],
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui sed mi faucibus tempus. Aliquam commodo ullamcorper sem, vitae tempor est interdum quis.\n\nUt tristique ex sed risus blandit, non sollicitudin arcu fermentum. Praesent a nunc at quam viverra finibus.",
         hero: {
             src: "/projects/jonesboro-kitchen/after.jpg",
             alt: "Finished kitchen remodel",
@@ -337,6 +350,8 @@ export const projects: Project[] = [
         category: "bathrooms",
         summary: "A full shower remodel.",
         scope: ["Tile shower", "Custom vanity", "Lighting upgrade"],
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a ligula pharetra, mattis felis vel, vulputate tellus.\n\nSed imperdiet sapien a arcu tristique, in dictum mi consequat. Curabitur vitae interdum lectus.",
         hero: {
             src: "/projects/arquis-bathroom/after.jpg",
             alt: "Finished bathroom remodel",
@@ -367,6 +382,8 @@ export const projects: Project[] = [
         category: "bathrooms",
         summary: "A full bathroom remodel.",
         scope: ["Shower upgrade"],
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pharetra nisl ut ex rhoncus, a volutpat arcu auctor. Integer vitae ante nisi.\n\nDonec sed sem id libero luctus posuere nec at massa.",
         hero: {
             src: "/projects/miles-bathroom/after.jpg",
             alt: "Finished bathroom remodel",
@@ -397,6 +414,8 @@ export const projects: Project[] = [
         category: "bathrooms",
         summary: "A full shower remodel.",
         scope: ["Tile shower"],
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu mattis ipsum. Integer viverra efficitur mauris id interdum.\n\nQuisque iaculis, nibh eget finibus sagittis, nunc libero condimentum nisl, vitae mattis mi nunc non arcu.",
         hero: {
             src: "/projects/scott-bathroom/after.jpg",
             alt: "Finished shower remodel",

@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import BeforeAfter from "@/features/projects-page/components/BeforeAfter/BeforeAfter";
 import { projects } from "@/data/projects";
 
@@ -29,41 +30,99 @@ export default function ProjectDetail({ params }: { params: Params }) {
                         sizes="(max-width: 768px) 100vw, 100vw"
                         priority
                     />
+                    <div className={styles.heroOverlay}>
+                        <span className={styles.heroBadge}>{project.category}</span>
+                        <h1 className={styles.heroTitle}>{project.title}</h1>
+                    </div>
                 </div>
-                <h1 className={styles.title}>{project.title}</h1>
-                {project.summary && (
-                    <p className={styles.summary}>{project.summary}</p>
-                )}
-                {!!project.scope?.length && (
-                    <ul className={styles.scope}>
-                        {project.scope.map((s) => (
-                            <li key={s}>{s}</li>
-                        ))}
-                    </ul>
-                )}
+                <div className={styles.breadcrumb}>
+                    <Link href="/projects">← Back to Projects</Link>
+                </div>
             </header>
 
+            <section className={styles.meta}>
+                <div className={`${styles.metaMain} ${styles.card}`}>
+                    {project.summary && (
+                        <p className={styles.summary}>{project.summary}</p>
+                    )}
+                    {project.description && (
+                        <div className={styles.richText}>
+                            <h3 className={styles.sectionHeading}>Project Overview</h3>
+                            {project.description.split("\n\n").map((para, i) => (
+                                <p key={i}>{para}</p>
+                            ))}
+                        </div>
+                    )}
+                    {project.testimonial?.quote && (
+                        <blockquote className={styles.testimonial}>
+                            “{project.testimonial.quote}”
+                            {project.testimonial.author && (
+                                <footer className={styles.testimonialAuthor}>
+                                    — {project.testimonial.author}
+                                </footer>
+                            )}
+                        </blockquote>
+                    )}
+                </div>
+                <aside className={`${styles.metaSide} ${styles.card}`}>
+                    <dl className={styles.info}>
+                        <div>
+                            <dt>Project Type</dt>
+                            <dd>{project.category}</dd>
+                        </div>
+                        {project.location && (
+                            <div>
+                                <dt>Location</dt>
+                                <dd>{project.location}</dd>
+                            </div>
+                        )}
+                        {project.date && (
+                            <div>
+                                <dt>Completed</dt>
+                                <dd>{project.date}</dd>
+                            </div>
+                        )}
+                    </dl>
+
+                    {!!project.scope?.length && (
+                        <div className={styles.scopeBlock}>
+                            <h3 className={styles.scopeHeading}>Work Included</h3>
+                            <ul className={styles.scope}>
+                                {project.scope.map((s) => (
+                                    <li key={s}>{s}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </aside>
+            </section>
+
             <section className={styles.beforeAfter}>
-                {project.before ? (
-                    <BeforeAfter
-                        before={project.before}
-                        after={project.after}
-                    />
-                ) : (
-                    <BeforeAfter after={project.after} />
-                )}
+                <div className={styles.card}>
+                    <h3 className={styles.sectionHeading}>Before & After</h3>
+                    {project.before ? (
+                        <BeforeAfter
+                            before={project.before}
+                            after={project.after}
+                        />
+                    ) : (
+                        <BeforeAfter after={project.after} />
+                    )}
+                </div>
             </section>
 
             {project.gallery?.length ? (
-                <section className={styles.gallery}>
+                <section className={`${styles.gallery} ${styles.card}`}>
+                    <h3 className={styles.sectionHeading}>Project Gallery</h3>
                     {project.gallery.map((g) => (
                         <div key={g.src} className={styles.gItem}>
                             <Image
                                 src={g.src}
                                 alt={g.alt ?? ""}
-                                fill
+                                width={g.width ?? 1400}
+                                height={g.height ?? 933}
                                 className={styles.gImg}
-                                sizes="(max-width: 768px) 100vw, 33vw"
+                                sizes="(max-width: 700px) 100vw, (max-width: 1024px) 50vw, (max-width: 1600px) 33vw, 25vw"
                             />
                         </div>
                     ))}

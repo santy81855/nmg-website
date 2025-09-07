@@ -7,7 +7,7 @@
 
 .block {
     position: relative;
-    border-radius: 10px;
+    border-radius: 6px; /* less rounded corners for modern look */
     overflow: hidden;
     /* Choose the unified aspect ratio you like (try 4/3 or 3/2) */
     aspect-ratio: 4 / 3;
