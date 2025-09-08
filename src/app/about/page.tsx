@@ -12,7 +12,7 @@ export default function AboutPage() {
             <header className={styles.header}>
                 <div className={styles.hero}>
                     <Image
-                        src="/images/home/home-image.jpg"
+                        src="/images/about/about-hero.png"
                         alt="Tools and remodeling materials"
                         fill
                         sizes="(max-width: 768px) 100vw, 100vw"
@@ -36,8 +36,8 @@ export default function AboutPage() {
                 <h1 className={styles.taglineTitle}>
                     Turning your vision into
                     <br /> reality with
-                    <br /> craftsmanship you can
-                    <br /> trust
+                    <br /> craftsmanship
+                    <br /> you can trust
                 </h1>
             </section>
 
@@ -78,10 +78,8 @@ export default function AboutPage() {
             </section>
 
             <section className={styles.aboutSplit}>
-                <div className={styles.patternCol} aria-hidden>
-                    {/* decorative column */}
-                </div>
-                <div className={`${styles.section} ${styles.card}`}>
+                <div className={styles.patternCol} aria-hidden></div>
+                <div className={`${styles.card}`}>
                     <h2 className={styles.sectionHeading}>
                         What Separates Us From the Rest
                     </h2>
@@ -100,7 +98,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className={`${styles.section} ${styles.vision}`}>
+            <section className={`${styles.vision}`}>
                 <div className={styles.visionImage}>
                     <Image
                         src="/images/home/collaboration.jpeg"
@@ -114,6 +112,7 @@ export default function AboutPage() {
                     <h3 className={styles.sectionSubheading}>
                         From Vision to Reality
                     </h3>
+
                     <p>
                         See the transformation for yourself—your ideas, our
                         craftsmanship. We bring your dream spaces to life with

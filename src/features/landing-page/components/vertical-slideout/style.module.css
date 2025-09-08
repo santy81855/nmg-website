@@ -19,6 +19,12 @@
     gap: var(--padding-xlarge);
 }
 
+@media (min-width: 1024px) {
+    .container {
+        max-width: 860px;
+    }
+}
+
 .item .icon {
     width: 50px;
     height: auto;
@@ -55,11 +61,16 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    /* Enforce consistent media aspect ratio */
+    aspect-ratio: 3 / 2;
 }
 
 .expandedItem .image {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .expandedItem .content {

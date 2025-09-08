@@ -85,6 +85,17 @@
     max-width: 800px;
 }
 
+@media (min-width: 1024px) {
+    .textContainer {
+        width: 74%;
+        max-width: 760px;
+    }
+    .slideoutContainer {
+        width: 86%;
+        max-width: 960px;
+    }
+}
+
 .footerSection {
     display: flex;
     flex-direction: column;

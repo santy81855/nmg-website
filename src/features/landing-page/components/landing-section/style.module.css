@@ -7,12 +7,16 @@
 .backgroundImageContainer {
     width: 100%;
     position: relative;
+    /* Limit hero height on wide screens so CTA stays above the fold */
+    height: clamp(420px, 70vh, 760px);
 }
 
 .backgroundImage {
-    min-width: 100%;
-    width: auto;
-    height: auto;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .overlay {
@@ -93,7 +97,17 @@
     }
 }
 
+/* Slightly taller for >= 480px while keeping CTA visible */
+@media (min-width: 480px) {
+    .backgroundImageContainer {
+        height: clamp(460px, 72vh, 780px);
+    }
+}
+
 @media (min-width: 1000px) {
+    .backgroundImageContainer {
+        height: clamp(480px, 66vh, 740px);
+    }
     .title {
         font-size: var(--font-size-x3large);
     }
@@ -108,6 +122,9 @@
 }
 
 @media (min-width: 1600px) {
+    .backgroundImageContainer {
+        height: clamp(500px, 60vh, 700px);
+    }
     .title {
         font-size: var(--font-size-x4large);
     }

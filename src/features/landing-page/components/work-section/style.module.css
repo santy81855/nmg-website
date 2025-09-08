@@ -10,10 +10,12 @@
 .titleSection {
     display: flex;
     align-self: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
     gap: var(--padding-medium);
     background-color: rgb(var(--background-color-rgb));
+    padding-inline: var(--padding-xlarge);
 }
 
 .textContainer {
@@ -22,7 +24,6 @@
     justify-content: center;
     align-items: flex-start;
     gap: var(--padding-small);
-    padding-inline-start: var(--padding-xlarge);
     background-color: rgb(var(--background-color-rgb));
     width: min-content;
 }
@@ -75,5 +76,11 @@
 @media (width < 335px) {
     .textContainer p {
         font-size: calc(var(--font-size-small) * 0.6);
+    }
+}
+
+@media (width > 768px) {
+    .titleSection {
+        padding-inline: var(--padding-x2large);
     }
 }

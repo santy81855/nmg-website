@@ -52,11 +52,10 @@ const Item = ({
                     className={styles.image}
                     src={image}
                     alt={title}
-                    width={450}
-                    height={304}
+                    fill
                     quality={100}
                     priority
-                    objectFit="cover"
+                    sizes="(max-width: 768px) 100vw, 600px"
                 />
                 <section className={styles.content}>
                     <section className={styles.textContainer}>

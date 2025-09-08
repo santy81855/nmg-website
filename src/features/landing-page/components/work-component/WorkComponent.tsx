@@ -28,6 +28,16 @@ const Item = ({ image, alt, title, description, link }: itemProps) => {
     );
 };
 
+const projects = (
+    <Item
+        image="/images/home/deck-2.webp"
+        alt="deck-image"
+        title="PROJECTS"
+        description="Current Projects"
+        link="/"
+    />
+);
+
 const WorkComponent = () => {
     return (
         <section className={styles.container}>
@@ -36,13 +46,6 @@ const WorkComponent = () => {
                 alt="kitchen-image"
                 title="PORTFOLIO"
                 description="Finished Projects"
-                link="/"
-            />
-            <Item
-                image="/images/home/deck-2.webp"
-                alt="deck-image"
-                title="PROJECTS"
-                description="Current Projects"
                 link="/"
             />
         </section>
