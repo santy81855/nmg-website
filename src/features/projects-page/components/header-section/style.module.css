@@ -70,6 +70,13 @@
     border-top-left-radius: var(--border-radius-small);
 }
 
+/* Tablet: slightly larger filter tabs */
+@media (min-width: 768px) {
+    .item {
+        font-size: var(--font-size-medium);
+    }
+}
+
 @media (width < 1010px) {
     .image {
         transform: translateY(-15%);

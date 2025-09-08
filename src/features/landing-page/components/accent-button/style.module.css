@@ -18,3 +18,12 @@
         background-color: rgb(var(--accent-color-hover-rgb));
     }
 }
+
+/* Tablet: larger button text and padding */
+@media (min-width: 768px) {
+    .button {
+        font-size: var(--font-size-large);
+        padding: calc(var(--padding-medium) * 1.1)
+            calc(var(--padding-xlarge) * 1.1);
+    }
+}
