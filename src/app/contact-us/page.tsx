@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import { HeaderSection, Details } from "@/features/contact-page";
+import { Footer } from "@/features/footer";
 
 const Page = () => {
     return (
@@ -10,6 +11,7 @@ const Page = () => {
             <section className={styles.detailsSection}>
                 <Details />
             </section>
+            <Footer />
         </section>
     );
 };

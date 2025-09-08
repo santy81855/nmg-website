@@ -119,7 +119,8 @@
     width: 100%;
     background-color: white;
     border: none;
-    padding-block: var(--padding-small);
+    /* Slightly taller fields for better ergonomics */
+    padding-block: calc(var(--padding-small) * 1.6);
     padding-inline: var(--padding-small);
     color: rgb(var(--text-color-rgb));
 }
@@ -134,11 +135,19 @@
     border: none;
     background-color: rgb(var(--accent-color-rgb));
     color: white;
-    padding-block: var(--padding-small);
+    /* Taller submit button */
+    padding-block: var(--padding-medium);
     padding-inline: var(--padding-small);
     font-family: var(--font-gilroy);
     font-size: var(--font-size-medium);
     font-weight: 200;
+}
+
+/* Larger label text on desktop */
+@media (min-width: 768px) {
+    .inputContainer label {
+        font-size: var(--font-size-large);
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {

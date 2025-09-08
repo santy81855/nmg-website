@@ -3,8 +3,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(var(--background-color-rgb));
-    margin-block-start: calc(var(--padding-xlarge));
+    background: #ffffff;
+    /* Push footer to bottom when parent is flex column */
+    margin-block-start: auto;
+    flex-shrink: 0;
 }
 
 .inner {

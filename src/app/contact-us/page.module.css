@@ -1,6 +1,6 @@
 .main {
     width: 100%;
-    height: 150%;
+    min-height: calc(100svh - var(--nav-height));
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -11,9 +11,15 @@
 
 .headerSection {
     width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--padding-large);
 }
 
 .detailsSection {
     width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--padding-large);
     padding-block: var(--padding-x2large);
 }
