@@ -133,6 +133,12 @@ export default async function ProjectDetail({
                     ))}
                 </section>
             ) : null}
+
+            <section className={styles.cta}>
+                <Link href="/contact-us" className={styles.ctaButton}>
+                    Get in touch
+                </Link>
+            </section>
         </article>
     );
 }

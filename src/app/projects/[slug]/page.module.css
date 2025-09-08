@@ -29,8 +29,8 @@
     position: relative;
     aspect-ratio: 16/9;
     width: 100%;
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px; /* less rounded corners */
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; /* remove rounding on hero */
     overflow: hidden;
 }
 .heroImg {
@@ -91,6 +91,8 @@
     font-weight: 600;
     letter-spacing: 0.02em;
 }
+
+/* removed decorative hero logo */
 
 /* Make hero taller on smaller screens to keep overlay text visible */
 @media (max-width: 1024px) {
@@ -263,4 +265,43 @@
 .richText p {
     margin-top: 0.75rem;
     line-height: 1.75;
+}
+
+/* Bottom CTA */
+.cta {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: center;
+    padding: var(--padding-large) var(--padding-large) calc(var(--padding-xlarge) * 2);
+}
+
+/* Modern outline CTA button */
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid rgb(var(--accent-color-rgb));
+    color: rgb(var(--accent-color-rgb));
+    background: linear-gradient(90deg, rgb(var(--accent-color-rgb)) 0%, rgb(var(--accent-color-rgb)) 100%);
+    background-size: 0% 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 0; /* square corners */
+    padding: clamp(0.7rem, 0.5vw + 0.6rem, 1rem) clamp(1.1rem, 1vw + 0.9rem, 2rem);
+    font-size: clamp(0.95rem, 0.8vw + 0.9rem, 1.3rem);
+    transition: color 160ms ease, border-color 160ms ease, background-size 220ms ease;
+}
+.ctaButton:hover {
+    color: white;
+    background-size: 100% 100%;
+    border-color: rgb(var(--accent-color-hover-rgb));
+}
+.ctaButton:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb), 0.25);
 }
