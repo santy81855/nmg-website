@@ -32,7 +32,7 @@ const WorkComponent = () => {
     return (
         <section className={styles.container}>
             <Item
-                image="/images/home/kitchen-logo.png"
+                image="/images/home/kitchen-with-logo.png"
                 alt="kitchen-image"
                 title="PORTFOLIO"
                 description="Finished Projects"
