@@ -47,8 +47,9 @@
     word-wrap: break-word;
     color: rgb(255, 255, 255);
     text-align: left;
-    font-size: var(--font-size-x2large);
-    line-height: 1.4;
+    /* Fluid typography: mobile → desktop */
+    font-size: clamp(2rem, 6vw, 5.5rem);
+    line-height: 1.1;
     letter-spacing: 1.8px;
     font-weight: 600;
 }
@@ -60,7 +61,8 @@
 .description {
     color: rgb(175, 175, 175);
     width: 25ch;
-    font-size: var(--font-size-small);
+    /* Fluid typography */
+    font-size: clamp(0.9rem, 1.2vw, 1.5rem);
     line-height: 1.4;
     letter-spacing: 1px;
 }
@@ -73,7 +75,8 @@
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     font-family: var(--gilroy-font);
-    font-size: var(--font-size-large);
+    /* Fluid button text */
+    font-size: clamp(1rem, 1.3vw, 1.6rem);
     font-weight: 200;
     margin-block-end: var(--padding-medium);
 }
@@ -108,32 +111,10 @@
     .backgroundImageContainer {
         height: clamp(480px, 66vh, 740px);
     }
-    .title {
-        font-size: var(--font-size-x3large);
-    }
-
-    .description {
-        font-size: var(--font-size-medium);
-    }
-
-    .ctaButton {
-        font-size: var(--font-size-xlarge);
-    }
 }
 
 @media (min-width: 1600px) {
     .backgroundImageContainer {
         height: clamp(500px, 60vh, 700px);
-    }
-    .title {
-        font-size: var(--font-size-x4large);
-    }
-
-    .description {
-        font-size: var(--font-size-large);
-    }
-
-    .ctaButton {
-        font-size: var(--font-size-x2large);
     }
 }

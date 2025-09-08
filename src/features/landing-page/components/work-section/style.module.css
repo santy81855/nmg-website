@@ -84,3 +84,28 @@
         padding-inline: var(--padding-x2large);
     }
 }
+
+/* Slight bump at tablet widths */
+@media (min-width: 768px) {
+    .textContainer h2 {
+        font-size: var(--font-size-large);
+    }
+    .textContainer p {
+        font-size: var(--font-size-small);
+    }
+}
+
+/* Scale copy for larger screens */
+@media (min-width: 1000px) {
+    .textContainer h2 {
+        font-size: var(--font-size-xlarge);
+    }
+    .textContainer p {
+        font-size: var(--font-size-medium);
+        width: 48ch;
+    }
+    .titleSection svg {
+        width: 72px;
+        height: 72px;
+    }
+}

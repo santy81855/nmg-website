@@ -52,3 +52,31 @@
         justify-content: center;
     }
 }
+
+/* Tablet bump for readability */
+@media (min-width: 768px) {
+    .item svg {
+        width: 48px;
+        height: 48px;
+    }
+    .item h3 {
+        font-size: var(--font-size-small);
+    }
+    .item p {
+        font-size: calc(var(--font-size-small) * 0.9);
+    }
+}
+
+/* Larger text/icons on desktop */
+@media (min-width: 1000px) {
+    .item svg {
+        width: 54px;
+        height: 54px;
+    }
+    .item h3 {
+        font-size: var(--font-size-medium);
+    }
+    .item p {
+        font-size: var(--font-size-small);
+    }
+}

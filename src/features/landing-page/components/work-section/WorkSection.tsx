@@ -8,9 +8,10 @@ const WorkSection = () => {
                 <section className={styles.textContainer}>
                     <h2>OUR WORK IN ACTION</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adispiscing
-                        elit. Nulla facillsi. Vestibulum ac liberia id sopien
-                        fermentum.
+                        Every project starts with a clear plan and ends with
+                        careful, clean workmanship. Take a look at a few
+                        recent transformations to see the details, materials,
+                        and finishes up close.
                     </p>
                 </section>
                 {rightDownArrow}

@@ -97,3 +97,21 @@
     background-color: white;
     border-radius: calc(var(--border-radius-small) * 1.2);
 }
+
+/* Desktop scaling for larger screens */
+@media (min-width: 1000px) {
+    .topItem h3 {
+        font-size: var(--font-size-xlarge);
+    }
+    .itemContainer p {
+        font-size: var(--font-size-medium);
+    }
+    .itemContainer .item svg {
+        width: 28px;
+        height: 28px;
+    }
+    .buttonLink {
+        width: 32px;
+        height: 32px;
+    }
+}

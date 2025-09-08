@@ -10,8 +10,10 @@ const SlideoutSection = () => {
                     <div className={styles.horLine}></div>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nulla facilisi. Vestibulum ac libero id sapien fermentum.
+                    From kitchens and baths to full home makeovers, we design,
+                    build, and finish spaces that fit the way you live. We
+                    handle the planning, permits, and clean execution—so you
+                    don’t have to.
                 </p>
             </section>
             <section className={styles.slideoutContainer}>

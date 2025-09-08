@@ -27,27 +27,26 @@ const ChooseSection = () => {
                 <section className={styles.textContainer}>
                     <h3 className={styles.title}>OUR COMMITMENT</h3>
                     <p className={styles.description}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nulla facilisi. Vestibulum ac libero id sapien
-                        fermentum.
+                        We treat your home like our own—clear timelines, honest
+                        pricing, and craftsmanship that lasts.
                     </p>
                     <section className={styles.checkItems}>
                         <section className={styles.item}>
                             {check}
                             <p className={styles.itemDescription}>
-                                Lorem ipsum dolor sit amet
+                                Straightforward estimates with no surprise add-ons
                             </p>
                         </section>
                         <section className={styles.item}>
                             {check}
                             <p className={styles.itemDescription}>
-                                Lorem ipsum dolor sit amet, consectetur
+                                Reliable schedules and respectful, tidy crews
                             </p>
                         </section>
                         <section className={styles.item}>
                             {check}
                             <p className={styles.itemDescription}>
-                                Lorem ipsum dolor sit
+                                Quality materials installed the right way
                             </p>
                         </section>
                     </section>

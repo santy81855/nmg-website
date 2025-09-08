@@ -96,6 +96,20 @@
     }
 }
 
+/* Scale text for larger screens */
+@media (min-width: 1000px) {
+    .titleContainer h2 {
+        font-size: var(--font-size-large);
+    }
+    .textContainer p,
+    .footerSection p {
+        font-size: var(--font-size-medium);
+    }
+    .footerSection h2 {
+        font-size: var(--font-size-xlarge);
+    }
+}
+
 .footerSection {
     display: flex;
     flex-direction: column;
@@ -129,4 +143,20 @@
     font-size: calc(var(--font-size-small) * 0.8);
     line-height: 1.4;
     letter-spacing: 1px;
+}
+
+/* Tablet bump for section headings and copy */
+@media (min-width: 768px) {
+    .titleContainer h2 {
+        font-size: var(--font-size-large);
+    }
+    .textContainer p {
+        font-size: var(--font-size-small);
+    }
+    .footerSection h2 {
+        font-size: var(--font-size-large);
+    }
+    .footerSection p {
+        font-size: var(--font-size-small);
+    }
 }

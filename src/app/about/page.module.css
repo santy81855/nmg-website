@@ -78,6 +78,7 @@
     font-size: clamp(1.1rem, 1.6vw + 0.9rem, 1.6rem);
     font-weight: 400;
     width: 60%;
+    position: 2;
 }
 
 .taglineTitle::before {

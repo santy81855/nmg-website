@@ -132,7 +132,7 @@
 }
 
 .expandedItem button {
-    margin-left: var(--padding-large);
+    margin-left: var(--padding-small);
     padding-inline: var(--padding-medium);
     padding-block: var(--padding-small);
     background-color: rgb(var(--accent-color-rgb));
@@ -143,6 +143,41 @@
     border: none;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Desktop scaling with media queries */
+@media (min-width: 768px) {
+    .item .title {
+        font-size: var(--font-size-xlarge);
+    }
+    .expandedItem .title {
+        font-size: var(--font-size-large);
+    }
+    .expandedItem .description {
+        font-size: var(--font-size-medium);
+    }
+    .expandedItem button {
+        font-size: var(--font-size-medium);
+    }
+
+    .expandedItem .content {
+        gap: var(--padding-large);
+    }
+}
+
+@media (min-width: 1200px) {
+    .item .title {
+        font-size: var(--font-size-xlarge);
+    }
+    .expandedItem .title {
+        font-size: var(--font-size-xlarge);
+    }
+    .expandedItem .description {
+        font-size: var(--font-size-large);
+    }
+    .expandedItem button {
+        font-size: var(--font-size-large);
+    }
 }
 
 /* Enable hover only on non-touch devices */

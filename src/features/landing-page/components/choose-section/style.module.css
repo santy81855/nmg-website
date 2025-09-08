@@ -161,3 +161,28 @@
         color: white;
     }
 }
+
+/* Desktop scaling for larger screens */
+@media (min-width: 1000px) {
+    .container h2 {
+        font-size: var(--font-size-xlarge);
+    }
+    .textContainer .title {
+        font-size: var(--font-size-xlarge);
+    }
+    .textContainer .description {
+        font-size: var(--font-size-medium);
+    }
+    .item svg {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
+    }
+    .item .itemDescription {
+        font-size: var(--font-size-medium);
+    }
+    .aboutButton {
+        font-size: var(--font-size-large);
+    }
+}
