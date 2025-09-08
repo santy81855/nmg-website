@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { Footer } from "@/features/footer";
 
 export const metadata = {
     title: "About | NM&G Remodeling",
@@ -121,46 +122,13 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className={styles.beforeAfterBand}>
-                <div className={styles.baStack}>
-                    <span
-                        className={`${styles.baLabel} ${styles.baBeforeLabel}`}
-                    >
-                        BEFORE
-                    </span>
-                    <span
-                        className={`${styles.baLabel} ${styles.baAfterLabel}`}
-                    >
-                        AFTER
-                    </span>
-                    <div
-                        className={`${styles.baCard} ${styles.baBefore}`}
-                    ></div>
-                    <div className={`${styles.baCard} ${styles.baAfter}`}></div>
-                </div>
-                <div className={styles.baStackAlt}>
-                    <span
-                        className={`${styles.baLabel} ${styles.baBeforeLabel}`}
-                    >
-                        BEFORE
-                    </span>
-                    <span
-                        className={`${styles.baLabel} ${styles.baAfterLabel}`}
-                    >
-                        AFTER
-                    </span>
-                    <div
-                        className={`${styles.baCard} ${styles.baBefore}`}
-                    ></div>
-                    <div className={`${styles.baCard} ${styles.baAfter}`}></div>
-                </div>
-            </section>
-
             <section className={styles.cta}>
                 <Link href="/contact-us" className={styles.ctaButton}>
                     Get a free quote
                 </Link>
             </section>
+            {/* Footer */}
+            <Footer />
         </article>
     );
 }

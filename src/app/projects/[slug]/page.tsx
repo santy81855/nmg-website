@@ -5,6 +5,7 @@ import Link from "next/link";
 import BeforeAfter from "@/features/projects-page/components/BeforeAfter/BeforeAfter";
 import { projects } from "@/data/projects";
 import LightboxImage from "@/features/projects-page/components/LightboxImage/LightboxImage";
+import { Footer } from "@/features/footer";
 
 type Params = { slug: string };
 
@@ -37,7 +38,9 @@ export default async function ProjectDetail({
                         priority
                     />
                     <div className={styles.heroOverlay}>
-                        <span className={styles.heroBadge}>{project.category}</span>
+                        <span className={styles.heroBadge}>
+                            {project.category}
+                        </span>
                         <h1 className={styles.heroTitle}>{project.title}</h1>
                     </div>
                 </div>
@@ -53,10 +56,14 @@ export default async function ProjectDetail({
                     )}
                     {project.description && (
                         <div className={styles.richText}>
-                            <h3 className={styles.sectionHeading}>Project Overview</h3>
-                            {project.description.split("\n\n").map((para, i) => (
-                                <p key={i}>{para}</p>
-                            ))}
+                            <h3 className={styles.sectionHeading}>
+                                Project Overview
+                            </h3>
+                            {project.description
+                                .split("\n\n")
+                                .map((para, i) => (
+                                    <p key={i}>{para}</p>
+                                ))}
                         </div>
                     )}
                     {project.testimonial?.quote && (
@@ -92,7 +99,9 @@ export default async function ProjectDetail({
 
                     {!!project.scope?.length && (
                         <div className={styles.scopeBlock}>
-                            <h3 className={styles.scopeHeading}>Work Included</h3>
+                            <h3 className={styles.scopeHeading}>
+                                Work Included
+                            </h3>
                             <ul className={styles.scope}>
                                 {project.scope.map((s) => (
                                     <li key={s}>{s}</li>
@@ -140,6 +149,7 @@ export default async function ProjectDetail({
                     Get in touch
                 </Link>
             </section>
+            <Footer />
         </article>
     );
 }

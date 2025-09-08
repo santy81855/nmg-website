@@ -335,83 +335,14 @@
     }
 }
 
-/* Before/After band - decorative blocks to mimic mobile comp */
-.beforeAfterBand {
-    background: rgb(var(--accent-color-2-rgb));
-    padding: calc(var(--padding-xlarge) * 1.5) var(--padding-large);
-    display: grid;
-    gap: calc(var(--padding-xlarge) * 1.75);
-    color: #fff;
-}
-.baCard {
-    position: absolute;
-    box-shadow: none;
-}
-.baStack,
-.baStackAlt {
-    position: relative;
-    height: 420px;
-    max-width: 520px;
-    margin-inline: auto;
-}
-.baBefore {
-    background: #d9d9d9;
-}
-.baAfter {
-    background: rgb(var(--accent-color-rgb));
-}
-
-/* First stack layout */
-.baStack .baBefore {
-    width: 56%;
-    height: 36%;
-    left: 8%;
-    top: 10%;
-}
-.baStack .baAfter {
-    width: 58%;
-    height: 50%;
-    right: 8%;
-    bottom: 10%;
-}
-
-/* Second stack mirrored */
-.baStackAlt .baBefore {
-    width: 70%;
-    height: 30%;
-    left: 6%;
-    top: 18%;
-}
-.baStackAlt .baAfter {
-    width: 68%;
-    height: 36%;
-    right: 6%;
-    bottom: 12%;
-}
-
-.baLabel {
-    position: absolute;
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    opacity: 0.75;
-}
-.baBeforeLabel {
-    left: 8%;
-    bottom: 36%;
-}
-.baAfterLabel {
-    right: 8%;
-    top: 18%;
-}
-
 /* CTA */
 .cta {
     width: 100%;
     max-width: var(--max-width);
     display: flex;
     justify-content: center;
-    padding: var(--padding-large) var(--padding-large)
-        calc(var(--padding-xlarge) * 2);
+    padding-block: calc(2 * var(--padding-x2large));
+    background-color: rgb(var(--background-color-rgb));
 }
 .ctaButton {
     display: inline-flex;

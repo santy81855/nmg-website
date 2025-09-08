@@ -99,7 +99,7 @@ const VerticalSlideout = () => {
             <Item
                 title="Deck Remodeling"
                 description="Custom deck design and construction"
-                image="/images/home/deck.webp"
+                image="/projects/charles-deck/after.jpg"
                 icon={deck}
                 number={0}
                 openItem={openItem}
@@ -108,7 +108,7 @@ const VerticalSlideout = () => {
             <Item
                 title="Kitchen Remodeling"
                 description="Custom deck design and construction"
-                image="/images/home/kitchen.webp"
+                image="/projects/jonesboro-kitchen/after.jpg"
                 icon={kitchen}
                 number={1}
                 openItem={openItem}
@@ -117,7 +117,7 @@ const VerticalSlideout = () => {
             <Item
                 title="Bathroom Remodeling"
                 description="Custom deck design and construction"
-                image="/images/home/bathroom.jpg"
+                image="/projects/scott-bathroom/after.jpg"
                 icon={bathroom}
                 number={2}
                 openItem={openItem}
@@ -126,7 +126,7 @@ const VerticalSlideout = () => {
             <Item
                 title="Basement Remodeling"
                 description="Custom deck design and construction"
-                image="/images/home/basement.jfif"
+                image="/projects/tefera-basement/after.jpg"
                 icon={stairs}
                 number={3}
                 openItem={openItem}
