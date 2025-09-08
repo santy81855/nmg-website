@@ -56,10 +56,18 @@ export const projects: Project[] = [
         title: "Tile shower and bathtub remodel",
         slug: "kenneston-bathroom",
         category: "bathrooms",
-        summary: "A full bathroom remodel.",
-        scope: ["Tile shower", "Added bathtub"],
+        summary:
+            "Gutted and rebuilt a small bathroom with a new tub/shower, beadboard wainscoting and bright, clean finishes.",
+        scope: [
+            "Demo to studs and subfloor repairs",
+            "New plumbing rough‑ins and shutoffs",
+            "Waterproofed window wall and surround",
+            "Alcove tub with white subway tile to the ceiling",
+            "Brass tub/shower trim and new shower rod",
+            "Beadboard wainscoting, trim, paint",
+        ],
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere, risus in volutpat rhoncus, urna nulla fermentum eros, a placerat lacus libero id libero. Integer ac vulputate felis.\n\nCurabitur a massa id neque eleifend mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent ut scelerisque massa. Donec mattis, mi non pharetra convallis, mi nibh cursus leo, id lacinia urna lorem ac arcu.",
+            "This bath was taken down to framing. We replaced compromised plank subflooring, corrected plumbing locations and properly waterproofed the wet wall that includes a window. The new alcove tub is wrapped in classic subway tile with tight, even lines and mildew‑resistant grout. We finished the room with beadboard wainscoting and fresh paint for a bright, low‑maintenance space that will hold up to daily use.",
         hero: {
             src: "/projects/kenneston-bathroom/after.jpg",
             alt: "Finished bathroom remodel",
@@ -88,10 +96,18 @@ export const projects: Project[] = [
         title: "Deck construction",
         slug: "charles-deck",
         category: "decks",
-        summary: "A new deck construction.",
-        scope: ["Pressure-treated wood", "Custom railing", "elevated deck"],
+        summary:
+            "Elevated composite deck with a screened porch wall, safe access stair and low‑maintenance finishes.",
+        scope: [
+            "Concrete footings and pressure‑treated framing",
+            "Composite decking with picture‑frame detail",
+            "Black aluminum balusters with PT rails",
+            "Wide access stairs",
+            "Screened wall system with full‑view door",
+            "Proper ledger flashing and code hardware",
+        ],
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae sapien et quam euismod aliquet. Suspendisse potenti. Phasellus non mattis tellus, eu pellentesque tortor.\n\nAenean vel justo volutpat, sagittis turpis at, feugiat odio. Nulla facilisi. Nam pulvinar orci a orci lobortis, vitae fringilla sem convallis.",
+            "We framed a new elevated deck tied into the brick home with properly flashed ledger and through‑bolted connections. The walking surface is composite for longevity and easy upkeep. A screened wall creates a protected sitting area while the open deck remains for grilling and sun. Black metal balusters keep views open and the wide stair makes access to the yard comfortable and safe.",
         hero: {
             src: "/projects/charles-deck/after.jpg",
             alt: "Finished deck construction",
@@ -140,16 +156,18 @@ export const projects: Project[] = [
         title: "Basement finishing and remodeling",
         slug: "tefera-basement",
         category: "basements",
-        summary: "A basement finishing and remodeling project.",
+        summary:
+            "Complete basement finish with porcelain tile floors, a custom wet bar and LED cove lighting.",
         scope: [
-            "Drywall installation",
-            "Flooring",
-            "LED Lighting",
-            "Bathroom addition",
-            "Custom bar",
+            "Framing, insulation and drywall",
+            "Electrical rough‑in, recessed cans and LED cove",
+            "Plumbing for wet bar",
+            "Porcelain tile flooring throughout",
+            "Brick veneer feature wall",
+            "Granite bar top with tiled face",
         ],
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet risus vitae metus porta tincidunt. Suspendisse potenti. Etiam eu rhoncus mauris, id volutpat arcu.\n\nMauris sed efficitur augue. Fusce sit amet arcu vitae nulla pharetra aliquam. Cras iaculis orci at justo dictum, id congue erat tristique.",
+            "This space started as open framing and insulation. We laid out zones for entertaining, added a full wet‑bar with plumbing and power, and finished the room with durable porcelain tile. A brick veneer wall anchors the room while the tray with LED cove lighting gives the basement a warm, finished feel. Everything is clean, code‑compliant and easy to maintain.",
         hero: {
             src: "/projects/tefera-basement/after.jpg",
             alt: "Finished basement remodel",
@@ -199,10 +217,18 @@ export const projects: Project[] = [
         title: "Bathroom and shower remodel",
         slug: "josh-bathroom",
         category: "bathrooms",
-        summary: "A bathroom and shower remodel.",
-        scope: ["Tile shower", "Custom vanity", "Lighting upgrade"],
+        summary:
+            "Tub‑to‑shower conversion with a black‑grid glass panel, marble accents and clean new finishes.",
+        scope: [
+            "Demo and conversion from tub to walk‑in shower",
+            "Waterproof pan and niche, subway tile walls",
+            "Marble mosaic shower floor and curb caps",
+            "Matte‑black trim and hardware",
+            "New vanity with marble top and updated flooring",
+            "Paint and wood shelving",
+        ],
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis, dui in elementum gravida, lectus augue dictum nulla, vitae porttitor arcu arcu sit amet lorem.\n\nInteger ultricies, nunc quis consectetur aliquet, turpis massa egestas velit, id ultrices nunc purus vitae arcu.",
+            "We opened up a cramped bath by removing the old tub and building a full‑size walk‑in shower. The pan is properly sloped and waterproofed, finished with marble hex mosaic that ties into the vanity top. Matte black trim and a steel‑grid style panel give the room a modern edge while keeping maintenance simple.",
         hero: {
             src: "/projects/josh-bathroom/after.jpg",
             alt: "Finished bathroom remodel",
@@ -251,10 +277,18 @@ export const projects: Project[] = [
         title: "Basement kitchen remodel",
         slug: "andrew-basement",
         category: "basements",
-        summary: "A basement kitchen remodel.",
-        scope: ["Custom cabinets", "Lighting upgrade"],
+        summary:
+            "Basement kitchenette and feature wall with floating shelves and integrated lighting.",
+        scope: [
+            "Rough plumbing and electrical for kitchenette",
+            "Base cabinets with quartz counters",
+            "Full tile feature wall in gray subway",
+            "Custom stained floating shelves",
+            "LED under‑shelf lighting and recessed cans",
+            "Drywall, paint and trim",
+        ],
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel lacinia purus. In suscipit eget lectus at mattis. Sed elementum justo ut ante interdum, id tempor nibh placerat.\n\nDuis tempor, quam id aliquet imperdiet, arcu nibh cursus libero, vitae pulvinar magna mi quis est.",
+            "We built out a clean, functional kitchenette anchored by a full height tiled wall. Two timber posts and floating shelves with integrated LED lighting provide display space and warmth against the gray tile. Durable quartz counters and modern cabinetry make the area ready for daily use and entertaining.",
         hero: {
             src: "/projects/andrew-basement/after.jpg",
             alt: "Finished basement kitchen remodel",
@@ -297,15 +331,17 @@ export const projects: Project[] = [
         title: "Kitchen remodel",
         slug: "jonesboro-kitchen",
         category: "kitchens",
-        summary: "A full kitchen remodel.",
+        summary: "Full kitchen renovation with a waterfall island, new shaker cabinetry and full‑height quartz splash.",
         scope: [
-            "Custom cabinets",
-            "New countertops",
-            "Lighting upgrade",
-            "island installation",
+            "Layout update and soffit removal",
+            "New shaker cabinets with glass display uppers",
+            "Quartz counters with waterfall island",
+            "Full‑height quartz backsplash",
+            "Under‑cabinet and in‑cabinet lighting",
+            "New hood and appliance upgrades",
         ],
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui sed mi faucibus tempus. Aliquam commodo ullamcorper sem, vitae tempor est interdum quis.\n\nUt tristique ex sed risus blandit, non sollicitudin arcu fermentum. Praesent a nunc at quam viverra finibus.",
+            "This 90s kitchen was rebuilt with a cleaner layout and brighter finishes. We installed new shaker cabinetry, added a large waterfall island and ran quartz up the walls for a continuous, easy‑to‑clean backsplash. Layered lighting—pendants, under‑cabinet and lit display uppers—keeps the workspace bright and inviting.",
         hero: {
             src: "/projects/jonesboro-kitchen/after.jpg",
             alt: "Finished kitchen remodel",
@@ -348,10 +384,15 @@ export const projects: Project[] = [
         title: "Bathroom remodel",
         slug: "arquis-bathroom",
         category: "bathrooms",
-        summary: "A full shower remodel.",
-        scope: ["Tile shower", "Custom vanity", "Lighting upgrade"],
+        summary: "New tiled shower with large‑format gray tile and a modern spa panel.",
+        scope: [
+            "New shower pan and waterproofing",
+            "Large‑format gray wall tile",
+            "Recessed niche and stone threshold",
+            "Multi‑function shower tower and handheld",
+        ],
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a ligula pharetra, mattis felis vel, vulputate tellus.\n\nSed imperdiet sapien a arcu tristique, in dictum mi consequat. Curabitur vitae interdum lectus.",
+            "We rebuilt the shower from the studs, waterproofed properly and finished the walls in a contemporary large‑format tile. A multi‑function shower panel adds body sprays and a rainfall head. The penny‑round floor mosaic provides grip and a timeless look.",
         hero: {
             src: "/projects/arquis-bathroom/after.jpg",
             alt: "Finished bathroom remodel",
@@ -380,10 +421,16 @@ export const projects: Project[] = [
         title: "Bathroom remodel",
         slug: "miles-bathroom",
         category: "bathrooms",
-        summary: "A full bathroom remodel.",
-        scope: ["Shower upgrade"],
+        summary:
+            "Upgraded shower with frameless glass, marble‑look tile and basketweave mosaic pan next to a soaking tub.",
+        scope: [
+            "Re‑tile shower walls in marble‑look subway",
+            "Built‑in niches",
+            "Basketweave mosaic shower pan and curb",
+            "Frameless glass enclosure with matte black hardware",
+        ],
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pharetra nisl ut ex rhoncus, a volutpat arcu auctor. Integer vitae ante nisi.\n\nDonec sed sem id libero luctus posuere nec at massa.",
+            "We refreshed this primary bath by rebuilding the shower with a new waterproof pan and crisp marble‑look tile. A basketweave mosaic floor ties in with the room’s gray plank tile, and a frameless enclosure keeps sightlines open to the freestanding tub.",
         hero: {
             src: "/projects/miles-bathroom/after.jpg",
             alt: "Finished bathroom remodel",
@@ -412,10 +459,16 @@ export const projects: Project[] = [
         title: "Shower remodel",
         slug: "scott-bathroom",
         category: "bathrooms",
-        summary: "A full shower remodel.",
-        scope: ["Tile shower"],
+        summary:
+            "Glass shower with marble‑look tile, dual niches and mosaic pan—bright, clean and easy to maintain.",
+        scope: [
+            "New waterproof pan and curb",
+            "Marble‑look subway tile with accent niches",
+            "Frameless glass enclosure",
+            "Updated trim with handheld",
+        ],
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu mattis ipsum. Integer viverra efficitur mauris id interdum.\n\nQuisque iaculis, nibh eget finibus sagittis, nunc libero condimentum nisl, vitae mattis mi nunc non arcu.",
+            "We built a tight, leak‑free shower using durable materials: porcelain wall tile with marble veining, a mosaic pan for traction and a frameless enclosure to keep the room feeling open. The niches provide practical storage without crowding the design.",
         hero: {
             src: "/projects/scott-bathroom/after.jpg",
             alt: "Finished shower remodel",

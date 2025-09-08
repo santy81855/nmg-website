@@ -63,7 +63,8 @@
 
 .itemContainer p {
     font-family: var(--gilroy-font);
-    font-size: calc(var(--font-size-xsmall) * 1.2);
+    /* Increase default size for better readability on mobile */
+    font-size: var(--font-size-small);
     font-weight: 200;
     color: white;
 }

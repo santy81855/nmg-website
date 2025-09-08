@@ -106,3 +106,22 @@
         flex-wrap: wrap;
     }
 }
+
+/* Make inputs and button larger on devices ≥ 470px */
+@media (min-width: 470px) {
+    .form .inputRow input,
+    .form textarea {
+        font-size: var(--font-size-medium);
+        padding-block: calc(var(--padding-small) * 1.25);
+        padding-inline: var(--padding-medium);
+    }
+    .form .inputRow input::placeholder,
+    .form textarea::placeholder {
+        font-size: var(--font-size-medium);
+    }
+    .form button {
+        font-size: var(--font-size-medium);
+        padding-block: var(--padding-medium);
+        padding-inline: calc(var(--padding-xlarge) * 1.1);
+    }
+}
