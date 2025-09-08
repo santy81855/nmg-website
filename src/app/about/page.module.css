@@ -253,10 +253,10 @@
     left: calc(-1 * var(--padding-xlarge));
     top: 50%;
     width: 8px;
-    height: 110%;
-    transform: translateY(calc(-50% - (0.5 * var(--padding-small))));
+    height: calc(115% + var(--padding-medium) * 1.5);
+    transform: translateY(calc(-50% + 2 * var(--padding-medium)));
     background: rgb(170, 170, 170);
-    z-index: 2;
+    z-index: 3;
 }
 
 .vision {
