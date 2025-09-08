@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BeforeAfter from "@/features/projects-page/components/BeforeAfter/BeforeAfter";
 import { projects } from "@/data/projects";
+import LightboxImage from "@/features/projects-page/components/LightboxImage/LightboxImage";
 
 type Params = { slug: string };
 
@@ -121,7 +122,7 @@ export default async function ProjectDetail({
                     <h3 className={styles.sectionHeading}>Project Gallery</h3>
                     {project.gallery.map((g) => (
                         <div key={g.src} className={styles.gItem}>
-                            <Image
+                            <LightboxImage
                                 src={g.src}
                                 alt={g.alt ?? ""}
                                 width={g.width ?? 1400}

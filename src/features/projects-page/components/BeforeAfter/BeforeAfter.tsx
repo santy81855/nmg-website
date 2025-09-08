@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./style.module.css";
-import Image from "next/image";
+import LightboxImage from "../LightboxImage/LightboxImage";
 
 type Img = { src: string; width?: number; height?: number; alt?: string };
 
@@ -16,7 +16,7 @@ export default function BeforeAfter({
         <section className={styles.wrapper}>
             {before && (
                 <figure className={styles.block}>
-                    <Image
+                    <LightboxImage
                         src={before.src}
                         alt={before.alt ?? "Before"}
                         fill
@@ -26,7 +26,7 @@ export default function BeforeAfter({
                 </figure>
             )}
             <figure className={styles.block}>
-                <Image
+                <LightboxImage
                     src={after.src}
                     alt={after.alt ?? "After"}
                     fill
