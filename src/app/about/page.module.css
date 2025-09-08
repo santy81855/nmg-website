@@ -66,8 +66,11 @@
     color: rgb(var(--text-color-rgb));
     display: flex;
     justify-content: flex-end;
-    padding-block: var(--padding-x2large);
+    padding-block-start: var(--padding-x2large);
     padding-inline: var(--padding-xlarge);
+    background-color: white;
+    z-index: 2;
+    padding-block-end: calc(var(--padding-medium) + var(--padding-x2large));
 }
 
 .taglineTitle {
@@ -113,7 +116,6 @@
     position: relative;
     z-index: 1;
     padding-block: var(--padding-xlarge);
-    margin-block-start: var(--padding-medium);
 }
 .feature {
     height: 100%;
