@@ -34,7 +34,8 @@ const ChooseSection = () => {
                         <section className={styles.item}>
                             {check}
                             <p className={styles.itemDescription}>
-                                Straightforward estimates with no surprise add-ons
+                                Straightforward estimates with no surprise
+                                add-ons
                             </p>
                         </section>
                         <section className={styles.item}>
@@ -50,7 +51,7 @@ const ChooseSection = () => {
                             </p>
                         </section>
                     </section>
-                    <Link className={styles.aboutButton} href="/">
+                    <Link className={styles.aboutButton} href="/about">
                         About Us
                     </Link>
                 </section>

@@ -131,7 +131,8 @@
     line-height: 1.4;
 }
 
-.expandedItem button {
+.expandedItem button,
+.expandedItem a {
     margin-left: var(--padding-small);
     padding-inline: var(--padding-medium);
     padding-block: var(--padding-small);
@@ -143,6 +144,8 @@
     border: none;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    display: inline-block;
 }
 
 /* Desktop scaling with media queries */
@@ -156,7 +159,8 @@
     .expandedItem .description {
         font-size: var(--font-size-medium);
     }
-    .expandedItem button {
+    .expandedItem button,
+    .expandedItem a {
         font-size: var(--font-size-medium);
     }
 
@@ -175,7 +179,8 @@
     .expandedItem .description {
         font-size: var(--font-size-large);
     }
-    .expandedItem button {
+    .expandedItem button,
+    .expandedItem a {
         font-size: var(--font-size-large);
     }
 }
@@ -190,11 +195,13 @@
         fill: rgb(var(--accent-color-rgb));
     }
 
-    .expandedItem button {
+    .expandedItem button,
+    .expandedItem a {
         cursor: pointer;
     }
 
-    .expandedItem button:hover {
+    .expandedItem button:hover,
+    .expandedItem a:hover {
         background-color: rgb(var(--accent-color-hover-rgb));
     }
 }

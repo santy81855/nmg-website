@@ -79,6 +79,8 @@
     font-size: clamp(1rem, 1.3vw, 1.6rem);
     font-weight: 200;
     margin-block-end: var(--padding-medium);
+    transition: transform 220ms ease, box-shadow 220ms ease,
+        background-color 220ms ease;
 }
 
 .ctaButton::after {
@@ -91,12 +93,24 @@
     height: 2px;
     background-color: white;
     z-index: 1;
+    transition: width 220ms ease, opacity 220ms ease;
 }
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
     .ctaButton {
         cursor: pointer;
+    }
+
+    .ctaButton:hover {
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+        background-color: rgb(var(--accent-color-rgb), 0.85);
+    }
+
+    .ctaButton:hover::after {
+        width: 60%;
+        opacity: 0.9;
     }
 }
 

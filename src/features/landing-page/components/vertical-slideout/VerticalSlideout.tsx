@@ -10,6 +10,7 @@ import {
     downArrow,
 } from "@/features/landing-page";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-client";
@@ -22,6 +23,7 @@ type ItemProps = {
     number: number;
     openItem: number;
     setOpenItem: (index: number) => void;
+    href: string;
 };
 
 const Item = ({
@@ -32,6 +34,7 @@ const Item = ({
     number,
     openItem,
     setOpenItem,
+    href,
 }: ItemProps) => {
     const handleClick = () => {
         setOpenItem(number);
@@ -62,7 +65,9 @@ const Item = ({
                         <p className={styles.title}>{title}</p>
                         <p className={styles.description}>{description}</p>
                     </section>
-                    <button>LEARN MORE</button>
+                    <Link href={href} className={styles.ctaLink}>
+                        LEARN MORE
+                    </Link>
                 </section>
             </motion.div>
         </AnimatePresence>
@@ -104,6 +109,7 @@ const VerticalSlideout = () => {
                 number={0}
                 openItem={openItem}
                 setOpenItem={setOpenItem}
+                href="/projects?tab=decks"
             />
             <Item
                 title="Kitchen Remodeling"
@@ -113,6 +119,7 @@ const VerticalSlideout = () => {
                 number={1}
                 openItem={openItem}
                 setOpenItem={setOpenItem}
+                href="/projects?tab=kitchens"
             />
             <Item
                 title="Bathroom Remodeling"
@@ -122,6 +129,7 @@ const VerticalSlideout = () => {
                 number={2}
                 openItem={openItem}
                 setOpenItem={setOpenItem}
+                href="/projects?tab=bathrooms"
             />
             <Item
                 title="Basement Remodeling"
@@ -131,6 +139,7 @@ const VerticalSlideout = () => {
                 number={3}
                 openItem={openItem}
                 setOpenItem={setOpenItem}
+                href="/projects?tab=basements"
             />
         </section>
     );

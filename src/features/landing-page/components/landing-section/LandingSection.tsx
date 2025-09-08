@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./style.module.css";
+import Link from "next/link";
 
 const LandingSection = () => {
     return (
@@ -28,7 +29,9 @@ const LandingSection = () => {
                             INTERION AND EXTERIOR REMODELING
                         </p>
                     </section>
-                    <button className={styles.ctaButton}>GET IN TOUCH</button>
+                    <Link href="/contact-us" className={styles.ctaButton}>
+                        GET IN TOUCH
+                    </Link>
                 </section>
             </section>
         </section>
