@@ -24,7 +24,7 @@ export type Project = {
         alt?: string;
     };
 
-    after: {
+    after?: {
         src: string;
         width?: number;
         height?: number;
@@ -331,7 +331,8 @@ export const projects: Project[] = [
         title: "Kitchen remodel",
         slug: "jonesboro-kitchen",
         category: "kitchens",
-        summary: "Full kitchen renovation with a waterfall island, new shaker cabinetry and full‑height quartz splash.",
+        summary:
+            "Full kitchen renovation with a waterfall island, new shaker cabinetry and full‑height quartz splash.",
         scope: [
             "Layout update and soffit removal",
             "New shaker cabinets with glass display uppers",
@@ -384,7 +385,8 @@ export const projects: Project[] = [
         title: "Bathroom remodel",
         slug: "arquis-bathroom",
         category: "bathrooms",
-        summary: "New tiled shower with large‑format gray tile and a modern spa panel.",
+        summary:
+            "New tiled shower with large‑format gray tile and a modern spa panel.",
         scope: [
             "New shower pan and waterproofing",
             "Large‑format gray wall tile",
@@ -485,6 +487,228 @@ export const projects: Project[] = [
         seo: {
             title: "Shower Remodel",
             description: "A modern shower remodel.",
+        },
+    },
+    {
+        slug: "detached-garage-roof-rebuild",
+        title: "Detached Garage Roof Rebuild & Exterior Refresh",
+        category: "decks", // no garage category available
+        summary:
+            "Removed storm-damaged roof, reframed with new rafters and ridge, installed sheathing, and restored exterior trims/siding to match the home. Final result blends seamlessly with existing façade.",
+        scope: [
+            "Full roof tear-off and structural reframing",
+            "New sheathing and weather barrier",
+            "Exterior trim/siding repairs and paint match",
+            "Garage door and surround reinstalled/realigned",
+        ],
+        description:
+            "After storm damage, this garage was stripped down and rebuilt with new rafters, sheathing, and exterior finishes. The siding and trim were carefully matched to the main house, making the garage look like it had always been part of the original design. The result is a strong, weather-tight structure with a seamless exterior that blends perfectly with the home.",
+        before: {
+            src: "/projects/outdoor-garage/before.jpg",
+            width: 3000,
+            height: 4000,
+            alt: "Garage opening tarped after storm damage",
+        },
+        after: {
+            src: "/projects/outdoor-garage/after.jpg",
+            width: 4000,
+            height: 3000,
+            alt: "Finished detached garage with new roof and matching exterior",
+        },
+
+        hero: {
+            src: "/projects/outdoor-garage/after.jpg",
+            width: 4000,
+            height: 3000,
+            alt: "Finished detached garage exterior",
+        },
+        gallery: [
+            {
+                src: "/projects/outdoor-garage/gallery-01.jpg",
+                width: 4000,
+                height: 3000,
+                alt: "New framing: rafters, ridge, and ceiling joists in progress",
+            },
+            {
+                src: "/projects/outdoor-garage/gallery-02.jpg",
+                width: 3000,
+                height: 4000,
+                alt: "Front view of the completed garage matching the house",
+            },
+        ],
+        featured: false,
+        seo: {
+            title: "Detached Garage Roof Rebuild & Exterior Refresh",
+            description:
+                "Rebuilt detached garage roof and restored exterior to match home.",
+        },
+    },
+    {
+        title: "Backyard Fire Pits",
+        slug: "fireplaces",
+        category: "decks",
+        summary:
+            "A collection of custom fire pits built with stone, brick, and paver patios. Each project is designed to fit the outdoor space and create a comfortable gathering spot.",
+        scope: [
+            "Excavation and base preparation",
+            "Paver and stone patio installs",
+            "Custom fire pit construction with brick or stone",
+            "Seating areas and landscaping touch-ups",
+        ],
+        hero: {
+            src: "/projects/fireplaces/gallery-01.jpg",
+            alt: "Custom stone fire pit with mulch landscaping",
+            width: 1200,
+            height: 1600,
+        },
+        description:
+            "Each fire pit project was designed to match the homeowner’s yard and style, whether it’s brick, stone, or pavers. These fire features not only create a warm focal point but also extend the usability of outdoor spaces throughout the year. From intimate seating circles to patios with built-in pits, these projects show the variety of ways a fire pit can transform a backyard.",
+        gallery: [
+            {
+                src: "/projects/fireplaces/gallery-01.jpg",
+                alt: "Stone fire pit surrounded by mulch landscaping",
+                width: 1200,
+                height: 1600,
+            },
+            {
+                src: "/projects/fireplaces/gallery-02.jpg",
+                alt: "Fire pit with flagstone patio by the house",
+                width: 1600,
+                height: 1200,
+            },
+            {
+                src: "/projects/fireplaces/gallery-03.jpg",
+                alt: "Square paver patio with block fire pit and grill insert",
+                width: 1200,
+                height: 1600,
+            },
+            {
+                src: "/projects/fireplaces/gallery-04.jpg",
+                alt: "Circular fire pit area with gravel and Adirondack chairs",
+                width: 1200,
+                height: 1600,
+            },
+            {
+                src: "/projects/fireplaces/gallery-05.jpg",
+                alt: "Paver patio with stacked stone fire pit and gravel walkway",
+                width: 1200,
+                height: 1600,
+            },
+            {
+                src: "/projects/fireplaces/gallery-06.jpg",
+                alt: "Brick fire pit with wood-look paver patio and seating",
+                width: 1200,
+                height: 1600,
+            },
+        ],
+        seo: {
+            title: "Custom Outdoor Fire Pits",
+            description:
+                "See our collection of backyard fire pit projects built with stone, brick, and paver patios—perfect for outdoor gatherings.",
+        },
+    },
+    {
+        title: "Poolside Patio with Stone Tile",
+        slug: "pool-patio",
+        category: "decks",
+        summary:
+            "Upgraded a poolside patio with natural stone tile, creating a durable and stylish outdoor space for entertaining.",
+        description:
+            "This poolside space was upgraded with natural stone tile, giving it a timeless and durable finish. The patterned stone layout creates an elegant surface that’s easy to maintain and stands up well to water and sun exposure. With its mix of light and warm tones, the new patio is both practical and stylish, making it an inviting area for gatherings by the pool.",
+        scope: [
+            "Removed old surface and prepared sub-base",
+            "Installed cement board underlayment",
+            "Set natural stone tile in a mixed pattern",
+            "Grouted and sealed for durability",
+        ],
+        before: {
+            src: "/projects/pool-patio/before.jpg",
+            alt: "Patio area before tile installation",
+            width: 2048,
+            height: 1152,
+        },
+        after: {
+            src: "/projects/pool-patio/after.jpg",
+            alt: "Finished poolside patio with stone tile",
+            width: 2048,
+            height: 1152,
+        },
+        hero: {
+            src: "/projects/pool-patio/after.jpg",
+            alt: "Stone tile poolside patio",
+            width: 2048,
+            height: 1152,
+        },
+        gallery: [
+            {
+                src: "/projects/pool-patio/gallery-01.jpg",
+                alt: "View of tiled patio with stone railing posts",
+                width: 2048,
+                height: 1152,
+            },
+            {
+                src: "/projects/pool-patio/gallery-02.jpg",
+                alt: "Patio with stone tile overlooking pool",
+                width: 2048,
+                height: 1152,
+            },
+        ],
+        seo: {
+            title: "Poolside Patio Remodel",
+            description:
+                "See this poolside patio upgrade with natural stone tile, perfect for outdoor living and entertaining.",
+        },
+    },
+    {
+        title: "Backyard Pergola Build",
+        slug: "fulton-pergola",
+        category: "decks",
+        summary:
+            "Added a custom wood pergola over the patio to provide shade and a natural extension of the home’s outdoor space.",
+        scope: [
+            "Site prep and layout for posts",
+            "Installed heavy-duty support beams",
+            "Constructed lattice-style roof for shade",
+            "Stained and sealed wood for long-lasting protection",
+        ],
+        description:
+            "This project turned a plain patio into a shaded retreat with a custom wood pergola. The heavy beams and detailed lattice roof provide both strength and style, while the rich stain finish protects the structure and enhances its natural beauty. The pergola adds shade during the day and creates a cozy, inviting atmosphere for relaxing or entertaining outdoors.",
+        before: {
+            src: "/projects/fulton-pergola/before.jpg",
+            alt: "Patio space before pergola installation",
+            width: 2048,
+            height: 956,
+        },
+        after: {
+            src: "/projects/fulton-pergola/after.jpg",
+            alt: "Finished pergola installed over patio",
+            width: 956,
+            height: 2048,
+        },
+        hero: {
+            src: "/projects/fulton-pergola/after.jpg",
+            alt: "Custom wooden pergola over backyard patio",
+            width: 956,
+            height: 2048,
+        },
+        gallery: [
+            {
+                src: "/projects/fulton-pergola/gallery-01.jpg",
+                alt: "View looking up through pergola beams",
+                width: 2048,
+                height: 956,
+            },
+            {
+                src: "/projects/fulton-pergola/gallery-02.jpg",
+                alt: "Close-up of pergola woodwork and beam details",
+                width: 2048,
+                height: 956,
+            },
+        ],
+        seo: {
+            title: "Custom Pergola Installation",
+            description:
+                "See this backyard pergola project featuring a custom wood structure built for shade and outdoor living.",
         },
     },
 ];

@@ -22,8 +22,12 @@ export default async function ProjectDetail({
     const project = projects.find((p) => p.slug === slug);
     if (!project) return notFound();
 
-    const heroSrc = project.hero?.src ?? project.after.src;
-    const heroAlt = project.hero?.alt ?? project.after.alt ?? project.title;
+    const heroSrc =
+        project.hero?.src ??
+        project.after?.src ??
+        project.gallery?.[0]?.src ??
+        "";
+    const heroAlt = project.hero?.alt ?? project.after?.alt ?? project.title;
 
     return (
         <article className={styles.wrap}>
@@ -112,19 +116,19 @@ export default async function ProjectDetail({
                 </aside>
             </section>
 
-            <section className={styles.beforeAfter}>
-                <div className={styles.card}>
-                    <h3 className={styles.sectionHeading}>Before & After</h3>
-                    {project.before ? (
+            {project.before && project.after ? (
+                <section className={styles.beforeAfter}>
+                    <div className={styles.card}>
+                        <h3 className={styles.sectionHeading}>
+                            Before & After
+                        </h3>
                         <BeforeAfter
                             before={project.before}
                             after={project.after}
                         />
-                    ) : (
-                        <BeforeAfter after={project.after} />
-                    )}
-                </div>
-            </section>
+                    </div>
+                </section>
+            ) : null}
 
             {project.gallery?.length ? (
                 <section className={`${styles.gallery} ${styles.card}`}>
