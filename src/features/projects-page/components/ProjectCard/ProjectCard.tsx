@@ -6,8 +6,10 @@ import type { Project } from "@/data/projects";
 type Props = { project: Project };
 
 const ProjectCard = ({ project }: Props) => {
-    const cover = project.hero?.src ?? project.after.src;
-    const alt = project.hero?.alt ?? project.after.alt ?? project.title;
+    const cover = project.hero?.src ?? project.after?.src ?? project.before?.src;
+    const alt = project.hero?.alt ?? project.after?.alt ?? project.before?.alt ?? project.title;
+
+    if (!cover) return null;
 
     return (
         <Link href={`/projects/${project.slug}`} className={styles.card}>
