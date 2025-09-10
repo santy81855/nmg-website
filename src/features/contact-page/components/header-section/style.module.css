@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    gap: var(--padding-medium);
 }
 
 .imageContainer {
@@ -38,7 +39,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-inline: var(--padding-medium);
+    /* Remove extra side padding to match image side gutter */
+    padding-inline: 0;
     position: relative;
     margin-block-start: var(--nav-height);
 }
@@ -161,6 +163,9 @@
 
 /* Mobile tweaks: keep row layout, reduce paddings */
 @media (max-width: 480px) {
+    .horizontalContainer {
+        gap: 0;
+    }
     /* Slightly smaller side padding inside the contact section */
     .contactContainer {
         padding-inline: var(--padding-small);

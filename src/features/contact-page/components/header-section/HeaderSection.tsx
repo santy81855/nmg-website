@@ -74,23 +74,52 @@ const HeaderSection = () => {
                 <form className={styles.form} onSubmit={onSubmit}>
                     <div className={styles.inputContainer}>
                         <label htmlFor="name">Name *</label>
-                        <input type="text" id="name" name="name" required />
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Name"
+                            required
+                        />
                     </div>
                 <div className={styles.inputContainer}>
                     <label htmlFor="email">Email *</label>
-                        <input type="email" id="email" name="email" required />
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                        />
                 </div>
                 <div className={styles.inputContainer}>
                     <label htmlFor="phone">Phone *</label>
-                        <input type="tel" id="phone" name="phone" required />
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Phone"
+                            required
+                        />
                 </div>
                 <div className={styles.inputContainer}>
-                    <label htmlFor="company">Company (optional)</label>
-                    <input type="text" id="company" name="company" placeholder="Company (optional)" />
+                    <label htmlFor="company">Company</label>
+                    <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        placeholder="Company (optional)"
+                    />
                 </div>
                 <div className={styles.inputContainer}>
                     <label htmlFor="message">Message *</label>
-                    <textarea rows={5} id="message" name="message" required />
+                    <textarea
+                        rows={5}
+                        id="message"
+                        name="message"
+                        placeholder="Your message"
+                        required
+                    />
                 </div>
                     <button type="submit" disabled={submitting}>
                         {submitting ? "Sending..." : "Submit"}
