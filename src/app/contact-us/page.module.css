@@ -23,3 +23,11 @@
     padding-inline: var(--padding-large);
     padding-block: var(--padding-x2large);
 }
+
+/* On small screens remove side padding to use full width */
+@media (max-width: 480px) {
+    .headerSection,
+    .detailsSection {
+        padding-inline: 0;
+    }
+}

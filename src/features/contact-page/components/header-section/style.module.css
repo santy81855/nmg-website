@@ -158,3 +158,18 @@
         background-color: rgb(var(--accent-color-hover-rgb));
     }
 }
+
+/* Mobile tweaks: keep row layout, reduce paddings */
+@media (max-width: 480px) {
+    /* Slightly smaller side padding inside the contact section */
+    .contactContainer {
+        padding-inline: var(--padding-small);
+    }
+
+    /* Make inputs a little less tall and a bit narrower padding */
+    .inputContainer input,
+    .inputContainer textarea {
+        padding-block: calc(var(--padding-small) * 1.2);
+        padding-inline: calc(var(--padding-small) * 0.8);
+    }
+}
