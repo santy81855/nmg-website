@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import { Navbar } from "@/features/nav-bar";
+import ToastProvider from "./ToastProvider";
 
 const gilroyFont = localFont({
     src: [
@@ -68,6 +69,7 @@ export default function RootLayout({
         <html lang="en" className={`${gilroyFont.variable} font-sans`}>
             <body>
                 <Navbar />
+                <ToastProvider />
                 {children}
             </body>
         </html>
