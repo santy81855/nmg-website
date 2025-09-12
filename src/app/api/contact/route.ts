@@ -63,7 +63,7 @@ export async function POST(request: Request) {
         `;
 
         const from = "resend@mailer.nmgremodeling.com";
-        const to = "mynameissantiagogarcia@gmail.com";
+        const to = "otqma17@gmail.com";
         const subject = "Contact Form Email";
 
         const { error } = await resend.emails.send({
