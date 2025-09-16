@@ -51,6 +51,7 @@
     padding-inline: var(--padding-medium);
     padding-block-start: var(--padding-medium);
     max-width: 800px;
+    gap: var(--padding-small);
 }
 
 .item {
@@ -59,9 +60,11 @@
     font-weight: 400;
     font-size: calc(var(--font-size-small) * 1);
     padding-block: var(--padding-small);
-    flex-grow: 1;
+    padding-inline: var(--padding-small);
     padding-block-end: calc(var(--padding-medium) * 1);
     text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .active {
@@ -81,6 +84,61 @@
     .image {
         transform: translateY(-15%);
     }
+}
+
+/* Overflow handling helpers */
+.tabWrapper {
+    display: flex;
+    flex: 1 1 0;
+}
+.moreWrap {
+    position: relative;
+    margin-left: auto;
+}
+.moreBtn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+.fillRow {
+    display: flex;
+    flex: 1 1 auto;
+    gap: 0;
+}
+.measureRow {
+    position: absolute;
+    visibility: hidden;
+    left: -9999px;
+    top: -9999px;
+    display: inline-flex;
+}
+.measureTab {
+    font-family: var(--font-gilroy);
+    font-weight: 400;
+    font-size: calc(var(--font-size-small) * 1);
+    padding-block: var(--padding-small);
+    padding-inline: var(--padding-small);
+}
+.menu {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% - 4px); /* open upwards */
+    background: rgb(var(--background-color-rgb));
+    border-radius: var(--border-radius-small);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    padding: 4px;
+    min-width: 160px;
+    z-index: 5;
+}
+.menuItem {
+    display: block;
+    color: white;
+    padding: 8px 12px;
+    font-family: var(--font-gilroy);
+    font-size: var(--font-size-small);
+}
+.menuItem:hover {
+    background: rgba(255, 255, 255, 0.08);
 }
 
 @media (width < 755px) {

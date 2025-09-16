@@ -15,6 +15,7 @@
 .content {
     width: 100%;
     max-width: var(--max-width);
+    z-index: 1;
 }
 
 .content {

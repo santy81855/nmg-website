@@ -6,7 +6,14 @@ import { redirect } from "next/navigation";
 import { Footer } from "@/features/footer";
 
 // categories that your HeaderSection uses
-const CATS = ["all", "bathrooms", "kitchens", "decks", "basements"] as const;
+const CATS = [
+    "all",
+    "bathrooms",
+    "kitchens",
+    "decks",
+    "basements",
+    "other",
+] as const;
 type Category = (typeof CATS)[number];
 
 const isCategory = (v: unknown): v is Category =>
